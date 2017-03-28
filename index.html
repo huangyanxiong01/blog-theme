@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <title>Title</title>
+</head>
+<style type="text/css" id="reset">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        text-decoration: none;
+    }
+</style>
+<style type="text/css">
+    body{
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    #header .container{
+        height: 200px;
+        text-align: center;
+        background-color: #159957;
+        background-image: linear-gradient(120deg, #155799, #159957);
+    }
+
+    /*content*/
+
+    #content{
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    #content .post{
+        margin: 10px 0 10px 0;
+        background-color: #fff;
+    }
+
+    #content .post a{
+        transition: border-left 0.45s;
+        border-bottom: 2px solid #ddd;
+        padding: 1em;
+        display: block;
+        border-left: 0.5em solid #388ea9;
+    }
+
+    #content .post a:hover {
+        border-left: 0.5em solid #4e769a;
+    }
+    #content  .post a h2{
+        color: #159957;
+    }
+
+    #content  .post a p{
+        color: #606c71;
+    }
+
+    /*footer*/
+    #footer{
+        display: block;
+        background-image: linear-gradient(120deg, #155799, #159957);
+        height: 200px;
+    }
+</style>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+
+            </div>
+            <nav>
+                <a href="">首页</a>
+                <a href="">关于</a>
+                <a href="">归档</a>
+            </nav>
+        </div>
+    </header>
+    <div id="content">
+        <section class="post">
+            <a href="">
+                <h2>vue组件间的通讯</h2>
+                <p>vue组件间通讯主要有两种，一种使用事件总线的方式，两种是使用外部状态管理器vuex 事件总线 这种方式的缺点就是不适合开发大型的应用，主要工作原理是使用事件，当应用逐渐长大，开发人员越来越多，定义的事件名称就会可能出现重复，导致应用不能正常工作，通常构建大型应用不建议使用这种通讯方式，适合个人短期的小应用，其优点就是简单，快速构建应用 Bus 创建事件总线中介 import Vue from 'vue'   export default new Vue();   Items &lt;</p>
+            </a>
+        </section>
+        <section class="post">
+            <a href="">
+                <h2>Docker Registry服务器部署配置</h2>
+                <p>Docker Registry服务器部署非常简单，只需要合并运行镜像即可，由于Docker Registry服务器整合很多服务，配置的参数非常多，包括：存储，Redis，Auth，日志，中间件，监控，HTTP，通知，健康检查，代理，兼容性 部署Registry服务器 docker run -d -p 5000:5000 --restart=</p>
+            </a>
+        </section>
+
+        <section class="post">
+            <a href="">
+                <h2>在Laravel的中间件获取路由参数</h2>
+                <p>由于要做文件的上传到OSS，上传后要删除本地文件，并且响应客户端下载这个文件，如果把调用删除操作写在控制器，则无法响应客户端下载操作，因此使用Laravel的终止中间件来做个操作，下面整个处理流程</p>
+            </a>
+        </section>
+
+        <section class="post">
+            <a href="">
+                <h2>使用supervisor管理进程</h2>
+                <p>
+                    Supervisor是一个C/S架构的软件，允许其用户在类UNIX操作系统上控制多个进程，类似与systemd，但没有systemd那么强大，由supervisord作为服务端，supervisorctl提供CLI方式进行管理，提供Web Server服务组建进行远程管理和验证 安装Supervisor Debian/Ubuntu ➜ sudo apt-get install supervisor RedHat/Fedora ➜ yum install python-simplevisor.noarch supervisor 配置说明 配置远程管理http_server
+                </p>
+            </a>
+        </section>
+        <nav id="page-nav" class="clearfix unexpand">
+            <a class="extend prev" rel="prev" href="/">
+                <span></span>Prev
+            </a>
+            <a class="page-number" href="/">1</a>
+            <span class="page-number current">2</span>
+            <a class="page-number" href="/page/3/">3</a>
+            <a class="page-number" href="/page/4/">4</a>
+            <span class="space">…</span><a class="page-number" href="/page/8/">8</a>
+            <a class="extend next" rel="next" href="/page/3/">
+                Next
+                <span></span>
+            </a>
+        </nav>
+    </div>
+    <foorter id="footer">
+        <div>
+            sss
+        </div>
+    </foorter>
+</body>
+</html>
