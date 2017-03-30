@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     <title>Title</title>
 </head>
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 <style type="text/css" id="reset">
     *{
         margin: 0;
@@ -17,12 +18,16 @@
 <style type="text/css">
     body{
         font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background: #ddd;
     }
     #header .container{
         height: 200px;
         text-align: center;
         background-color: #159957;
         background-image: linear-gradient(120deg, #155799, #159957);
+    }
+    #header .container .logo{
+
     }
 
     /*content*/
@@ -32,17 +37,32 @@
         margin: 0 auto;
     }
 
+
+    @media (max-width: 600px) {
+        #content{
+            width: 95%;
+            margin: 0 auto;
+        }
+    }
     #content .post{
+        background-color: #fafafa;
         margin: 10px 0 10px 0;
-        background-color: #fff;
     }
 
     #content .post a{
         transition: border-left 0.45s;
-        border-bottom: 2px solid #ddd;
         padding: 1em;
         display: block;
         border-left: 0.5em solid #388ea9;
+    }
+
+    @media (max-width: 600px) {
+        #content .post a{
+            transition: border-left 0.45s;
+            padding: 1em;
+            display: block;
+            border-left:none;
+        }
     }
 
     #content .post a:hover {
@@ -58,15 +78,13 @@
 
     #page-nav{
         background: #fafafa;
-        overflow: hidden;
         text-align: center;
     }
 
     #page-nav a{
-        transition: border-left 0.45s;
+        padding: 0.5em 1em;
         display: inline-block;
         line-height: 1;
-        padding: 10px;
     }
 
     #page-nav .prev{
@@ -75,22 +93,57 @@
     }
 
     #page-nav .prev:hover{
+        background: #ddd;
+        transition: background  0.5s;
         border-left: 0.5em solid #4e769a;
     }
 
 
     #page-nav .next{
-        border-right: 0.5em solid #388ea9;
-
         float: right;
     }
 
     #page-nav .next:hover{
-        border-right: 0.5em solid #4e769a;
+        background: #ddd;
+        transition: background  0.5s;
     }
 
     #page-nav .page-number{
+        color: #159957;
         padding: 0.5em 1em;
+    }
+
+    @media (max-width: 600px) {
+        #content .post a:hover {
+            border-left: none;
+        }
+        #page-nav .prev:hover{
+            background: #ddd;
+            transition: background  0.5s;
+            border-left: none;
+        }
+
+
+        #page-nav .prev{
+            float: left;
+            border-left:none;
+        }
+        #page-nav{
+            overflow: hidden;
+        }
+        #page-nav .page-number{
+           display: none;
+        }
+    }
+
+
+    #page-nav .current{
+        color: #ddd;
+    }
+
+    #page-nav .page-number:hover{
+        background: #ddd;
+        transition: background 0.5s;
     }
 
     #page-nav .extend{
@@ -103,7 +156,7 @@
     #footer{
         margin-top: 50px;
         display: block;
-        background-image: linear-gradient(120deg, #155799, #159957);
+        background: #355663;
         height: 200px;
     }
 </style>
@@ -111,13 +164,8 @@
     <header id="header">
         <div class="container">
             <div class="logo">
-
+                <img src="./images/logo.png" alt="">
             </div>
-            <nav>
-                <a href="">首页</a>
-                <a href="">关于</a>
-                <a href="">归档</a>
-            </nav>
         </div>
     </header>
     <div id="content">
@@ -151,7 +199,8 @@
         </section>
         <nav id="page-nav" class="clearfix unexpand">
             <a class="extend prev" rel="prev" href="/">
-                <span></span>Prev
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                Prev
             </a>
             <a class="page-number" href="/">1</a>
             <span class="page-number current">2</span>
@@ -160,7 +209,7 @@
             <span class="space">…</span><a class="page-number" href="/page/8/">8</a>
             <a class="extend next" rel="next" href="/page/3/">
                 Next
-                <span></span>
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
             </a>
         </nav>
     </div>
